@@ -1,12 +1,12 @@
 # DATA SOURCE FOR AMI
-#data "aws_ami" "aws_ubuntu" {
-#  owners      = [var.aws_owner_id]
-#  most_recent = true
-#  filter {
-#    name   = "name"
-#    values = [var.aws_ami_name]
-#  }
-#}
+data "aws_ami" "aws_ubuntu" {
+  owners      = [var.aws_ami_id] #[var.aws_owner_id]
+  most_recent = true
+  filter {
+    name   = "name"
+    values = [var.aws_ami_name]
+  }
+}
 
 data "aws_vpc" "main_vpc" {
   filter {
